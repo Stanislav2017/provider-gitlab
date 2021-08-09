@@ -40,7 +40,7 @@ func Setup(mgr ctrl.Manager, l logging.Logger) error {
 		projects.SetupProject,
 		projecthooks.SetupProjectHook,
 		projectmembers.SetupProjectMember,
-		deploytokens.SetupProjectDeployToken,
+		deploytokens.SetupDeployToken,
 	} {
 		if err := setup(mgr, l); err != nil {
 			return err

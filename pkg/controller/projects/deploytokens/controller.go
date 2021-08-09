@@ -47,8 +47,8 @@ const (
 	errDeleteFailed   = "cannot delete Gitlab deploytoken"
 )
 
-// SetupProjectDeployToken adds a controller that reconciles ProjectDeployTokens.
-func SetupProjectDeployToken(mgr ctrl.Manager, l logging.Logger) error {
+// SetupDeployToken adds a controller that reconciles DeployTokens.
+func SetupDeployToken(mgr ctrl.Manager, l logging.Logger) error {
 	name := managed.ControllerName(v1alpha1.DeployTokenKind)
 
 	return ctrl.NewControllerManagedBy(mgr).
